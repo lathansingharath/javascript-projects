@@ -49,5 +49,19 @@ if (weatherStatus !== "clear"){
 
 // Verify shuttle launch can proceed based on above conditions
 if (preparedForLiftOff){
+
+    console.log("All systens are ready to go")
+    console.log("Date:",date);
+    console.log("Time: ",time);
+    console.log("Astronaut Count: ",astronautCount);
+    console.log("Crew Mass: ",crewMassKg);
+    console.log("Fuel Mass: ",fuelMassKg);
+    console.log("Shuttle Mass: ",shuttleMassKg);
+    console.log("Total Mass: ", totalMassKg);
+    console.log("Fuel Temperature: ",fuelTempCelsius);
+    console.log("Weather Status: ",weatherStatus);
     console.log("Have a safe trip astronauts");
 }
+
+
+
