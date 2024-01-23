@@ -50,13 +50,11 @@ function askForNumber() {
 function generatePassword(string1, string2) {
   let code = '';
 
-  for (let i = 0; i < string1.length || 
-    i < string2.length; i++)
-{
-if (i < string1.length)
-code += string1[i]; 
-if (i < string2.length)
-code += string2[i];
+  for (let i = 0; i < string1.length || i < string2.length; i++) {
+    if (i < string1.length)
+      code += string1[i]; 
+    if (i < string2.length)
+      code += string2[i];
 }
   
   
