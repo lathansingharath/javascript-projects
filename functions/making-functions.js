@@ -79,4 +79,4 @@ function reverse(str) {
     return reversedLettersArray.join('');
 }
 
-console.log(makeDiamond(5));
+console.log(makeDiamond(6));
