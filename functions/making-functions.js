@@ -1,11 +1,18 @@
+const input = require('readline-sync');
 
-function makeLine(size) {
+//let userCharInput = input.question("Please pick a character. If no character is picked, a default will be assigned ");
+
+
+function makeLine(size,userInput = "#") {
     let hashes = "";
     for (let i = 0; i < size; i++) {
-        hashes += "#";
+        hashes += userInput;
+    //    hashes += userCharInput;
     }
     return hashes;
 }
+
+//console.log(makeLine(6,"&"));
 
 
 function makeSquare (size) {
@@ -43,7 +50,7 @@ function makeSpaceLine(numSpaces, numChars) {
     for (let i = 0; i < numSpaces; i++) {
         totalSpaceNum += " ";
     }
-    return makeSpaceLineHashes = totalSpaceNum + makeLine(numChars) + totalSpaceNum;
+    return makeSpaceLineHashes = totalSpaceNum + makeLine(numChars,"&") + totalSpaceNum;
 }
 
 //console.log(makeSpaceLine(3,10));
