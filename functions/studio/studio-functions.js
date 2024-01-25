@@ -3,9 +3,29 @@
 // Part One: Reverse Characters
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
-// 2. Within the function, split the string into an array, then reverse the array.
+function reverseCharacters (str) {
+    if ((typeof str) === "string"){
+        let strArray = str.split("").reverse().join("");
+        return strArray;
+    } else if ((typeof str) === "number") {
+        let strNum = String(str);
+        strArray = strNum.split("").reverse().join("");
+        return Number(strArray);
+
+    }
+    
+ // let strArray = str.split("").reverse().join("");
+ // return strArray;
+}
+let testInput = 3456;
+console.log(reverseCharacters(testInput));
+
+// 2. Within the function, split the string into an array, then reverse the array
+
 // 3. Use join to create the reversed string and return that string from the function.
+
 // 4. Below the function, define and initialize a variable to hold a string.
+
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
@@ -20,6 +40,16 @@
 // Part Three: Complete Reversal
 
 // 1. Define and initialize an empty array.
+function reverseArray (incomingArray) {
+    let oldArray = [];
+    for (let i = 0; i < incomingArray.length; i++){
+        oldArray.push(reverseCharacters(incomingArray[i]));
+    }
+    let newReversedArray = oldArray.reverse();
+    return newReversedArray;
+
+
+}
 // 2. Loop through the old array.
 // 3. For each element in the old array, call reverseCharacters to flip the characters or digits.
 // 4. Add the reversed string (or number) to the array defined in part ‘a’.
@@ -30,9 +60,26 @@ let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
+console.log(reverseArray(arrayTest2));
 // Bonus Missions
 
 // 1. Have a clear, descriptive name like funPhrase.
+function funPhrase (str) {
+    let retrieveStr = "";
+    if (str.length <= 3) {
+        retrieveStr = str[str.length - 1];
+    } else {
+        retrieveStr = str.slice(0,3);
+    }
+    let newPhrase = `We put the ${retrieveStr} in ${str}`;
+    return newPhrase;
+
+}
+
+console.log(funPhrase("lathan"));
+
+
+
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
@@ -44,6 +91,12 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // Area of rectangle equal to length x width
 
+function calcArea (len,wid = len) {
+    let area = len * wid;
+    return area;
+}
+
+console.log(`The area is ${calcArea(3,9)}`);
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
 // 2. The function should return the area, NOT print it.
 // 3. Call your area function by passing in two arguments - the length and width.
