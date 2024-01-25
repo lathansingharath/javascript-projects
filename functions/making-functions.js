@@ -1,19 +1,15 @@
 const input = require('readline-sync');
 
 //let userCharInput = input.question("Please pick a character. If no character is picked, a default will be assigned ");
-
-
 function makeLine(size,userInput = "#") {
     let hashes = "";
     for (let i = 0; i < size; i++) {
         hashes += userInput;
-    //    hashes += userCharInput;
     }
     return hashes;
 }
 
 //console.log(makeLine(6,"&"));
-
 
 function makeSquare (size) {
     let squareHashes = "";
@@ -25,7 +21,6 @@ function makeSquare (size) {
 function makeRectangle(width, height) {
     let rectangleHashes = "";
     for (let i = 0; i < height; i++) {
-
         rectangleHashes += "\n" +makeLine(width);
     }
 
@@ -61,7 +56,6 @@ function makeIsoscelesTriangle(height) {
         makeIsoscelesTriangleHashes += "\n" + makeSpaceLine(height - i - 1, 2 * i + 1);
     }
     return makeIsoscelesTriangleHashes;
-
 }
 
 //console.log(makeIsoscelesTriangle(5));
@@ -69,15 +63,9 @@ function makeIsoscelesTriangle(height) {
 function makeDiamond(height) {
     let diamondHashes = "";
     for (let i = 0; i < height; i++) {
-
-
     }
-
     diamondHashes = makeIsoscelesTriangle(height) + "\n" + reverse(makeIsoscelesTriangle(height));
-
-    
     return diamondHashes;
-
 }
 
 function reverse(str) {
