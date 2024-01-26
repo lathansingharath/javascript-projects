@@ -21,22 +21,17 @@ let testInput = 3456;
 console.log(reverseCharacters(testInput));
 
 // 2. Within the function, split the string into an array, then reverse the array
-
 // 3. Use join to create the reversed string and return that string from the function.
-
 // 4. Below the function, define and initialize a variable to hold a string.
-
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
 // Part Two: Reverse Digits
-
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
 // 2. If typeof is ‘string’, return the reversed string as before.
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
-
 // Part Three: Complete Reversal
 
 // 1. Define and initialize an empty array.
@@ -47,8 +42,6 @@ function reverseArray (incomingArray) {
     }
     let newReversedArray = oldArray.reverse();
     return newReversedArray;
-
-
 }
 // 2. Loop through the old array.
 // 3. For each element in the old array, call reverseCharacters to flip the characters or digits.
@@ -60,9 +53,8 @@ let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
-console.log(reverseArray(arrayTest2));
+console.log(reverseArray(arrayTest3));
 // Bonus Missions
-
 // 1. Have a clear, descriptive name like funPhrase.
 function funPhrase (str) {
     let retrieveStr = "";
@@ -75,10 +67,7 @@ function funPhrase (str) {
     return newPhrase;
 
 }
-
 console.log(funPhrase("lathan"));
-
-
 
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
@@ -96,7 +85,7 @@ function calcArea (len,wid = len) {
     return area;
 }
 
-console.log(`The area is ${calcArea(3,9)}`);
+console.log(`The area is ${calcArea(3)}`);
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
 // 2. The function should return the area, NOT print it.
 // 3. Call your area function by passing in two arguments - the length and width.
