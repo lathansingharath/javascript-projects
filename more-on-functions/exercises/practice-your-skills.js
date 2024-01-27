@@ -1,5 +1,11 @@
 //Create an anonymous function and set it equal to a variable.
 
+let trippleValue = function (userInput) {
+    
+}
+
+console.log(trippleValue(3));
+
 /* Your function should:
 a) If passed a number, return the tripled value.
 b) If passed a string, return the string “ARRR!”
