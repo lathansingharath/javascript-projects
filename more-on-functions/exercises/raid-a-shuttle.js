@@ -66,10 +66,8 @@ let cargoSale = function (arr) {
     } else {
       i++;
     }
-    if (pushCount === 2) {  
-      return cargoRetrievel;
-    }
   }
+  return cargoRetrievel;
 };
 
 //console.log(cargoSale(cargoHold));
