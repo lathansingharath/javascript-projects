@@ -8,7 +8,7 @@ let superChimpOne = {
 
 let salamander = {
    name: "Lacey",
-   species: "Axolotl Salamander",
+   species: "Salamander",
    mass: 0.1,
    age: 5,
    move: () => Math.ceil(Math.random() * 10)
@@ -49,22 +49,17 @@ let c = randID();
 let d = randID();
 let e = randID();
 
-superChimpOne["astronautID"] = a;
 while (b === a ) {
    b = randID();
- 
 }
 while (c === b || c === a ) {
    c = randID();
-    
 }
 while (d === c || d === b  || d === a ) {
    d = randID();
-   
 }
 while (e === d || e === c || e === b || e === a) {
-   e = randID();
-  
+   e = randID(); 
 }
 superChimpOne["astronautID"] = a;
 salamander["astronautID"] = b;
@@ -74,11 +69,33 @@ tinyAnimal["astronautID"] = e;
 
 // Create an array to hold the animal objects.
 let crewArr = [superChimpOne,salamander,superChimpTwo,dog,tinyAnimal];
-
 // Print out the relevant information about each animal.
+const crewReports = (arr) => {
+  for (let i = 0; i < arr.length; i++){
+      console.log(`${arr[i].name} is a ${arr[i].species}. They are ${arr[i].age} years old and ${arr[i].mass} kilograms. Their ID is ${arr[i].astronautID}`);
+   }  
+}
+crewReports(crewArr);
  
-console.log(crewArr);
 // Start an animal race!
+let animalTurns = [];
+let animalMoveResultStrArr = [];
+const fitnessTest = (arr) => {
+
+   let animalMove;
+   let animalMoveResultStr = "";
+   for (let i = 0; i < arr.length; i++) {
+      animalMove = Math.ceil((arr[i].move()) / 2);
+      animalTurns.push(animalMove);
+      //animalMoveResultStr = arr[i].name +" took "+animalMove+" turns to take 20 steps";
+      animalMoveResultStr = (`${arr[i].name} took ${animalMove} turns to take 20 steps`);
+
+      animalMoveResultStrArr.push(animalMoveResultStr);     
+   }
+   return animalMoveResultStrArr;  
+}
+console.log(fitnessTest(crewArr));
+
 
 
 
