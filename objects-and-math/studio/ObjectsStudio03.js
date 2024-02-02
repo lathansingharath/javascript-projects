@@ -1,8 +1,29 @@
 // Code your crewMass function here:
-
+function crewMass (totCrewArr) {
+  let totMass =0;
+  for (let i = 0;i < totCrewArr.length; i++) {
+    totMass += totCrewArr[i].mass;
+   // console.log("inside function ",totMass); //testing for debug
+  }
+  //console.log(totMass); //testing for debugging
+  return Math.round(totMass*10)/10;
+}
 
 // Code your fuelRequired function here:
+let shuttleMass = 75000;
+function fuelRequired (crewArr, crewMassFunc) {
+  let totCrewAndShuttleMass = shuttleMass + crewMassFunc(crewArr);
+  let totRequiredFuel = totCrewAndShuttleMass * 9.5;
 
+  for (let i = 0; i < crewArr.length; i ++) {
+    if (crewArr[i].species === "dog" || crewArr[i].species === "cat") {
+      totRequiredFuel += 200;
+    } else {
+      totRequiredFuel += 100;
+    }
+  }
+  return Math.ceil(totRequiredFuel);
+}
 
 // The pre-selected crew is in the array at the end of this file.
 // Feel free to add, remove, or switch crew members as you see fit.
@@ -51,4 +72,8 @@ let candidateA = {
  };
  
  let crew = [candidateB,candidateD,candidateF];
+ console.log(`The mission has a luanch mass of ${crewMass(crew)+shuttleMass} kg and requires ${fuelRequired(crew,crewMass)} kg of fuel`);
+
+
+
  
