@@ -14,3 +14,10 @@ function randomArrayElement(arr){
     let index = Math.floor(Math.random()*arr.length);
     return arr[index];
 }
+
+//this object makes all three functions available to other files
+module.exports = {
+    isPalindrome: isPalindrome,
+    evenOrOdd: evenOrOdd,
+    randomArrayElement: randomArrayElement, 
+}   
