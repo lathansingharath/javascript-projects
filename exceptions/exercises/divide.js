@@ -5,3 +5,21 @@
 // However, if the denominator is zero you should throw the error, "Attempted to divide by zero."
 
 // Code your divide function here:
+
+
+
+//let divideResult = divide(3,1);
+let divide = (numerator,denominator) => {
+    try {
+        if (denominator === 0 ) {
+            throw Error ("Attempted to divide by zero.");
+        }
+    } catch (err) {
+        console.error (err);
+    }
+    return numerator/denominator;
+}
+console.log(divide(3,0));
+
+
+

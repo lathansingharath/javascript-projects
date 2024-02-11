@@ -11,7 +11,7 @@ const launchOutput = (num) => {
     if (num % 2 === 0) {
         if (num % 3 === 0){
             if (num % 5 ===0) {
-                return "LaunchCode  Rocks!";
+                return "LaunchCode Rocks!";
             } else {
                 return "LaunchCode!";
             }
@@ -21,7 +21,6 @@ const launchOutput = (num) => {
         } else {
             return "Launch!";
         }
-  
     }
     if (num % 3 === 0) {
         if (num % 5 === 0) {

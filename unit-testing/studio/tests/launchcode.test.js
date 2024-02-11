@@ -42,7 +42,7 @@ describe("Testing launchcode", function() {
     expect(launching.launchOutput(10)).toEqual("Launch Rocks! (CRASH!!!!)");
   });
   test("Number is divisible by 2 and 3 and 5 ", function() {
-    expect(launching.launchOutput(30)).toEqual("LaunchCode  Rocks!");
+    expect(launching.launchOutput(30)).toEqual("LaunchCode Rocks!");
   });
   test("Number is not divisible by 2 or 3 or 5 ", function() {
     expect(launching.launchOutput(1)).toEqual("Rutabagas! That doesn't work.");
