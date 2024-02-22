@@ -14,12 +14,13 @@ describe("Testing launchcode", function() {
   test("The percentage of cool employees should be 100% ", function () {
     expect(launching.launchcode.percentageCoolEmployees).toBe(100);
   });
-  test("Should have java, science, and math as the offered programs ", function() {
-    expect(launching.launchcode.programsOffered[0]).toBe("java");
-    expect(launching.launchcode.programsOffered[1]).toBe("science");
-    expect(launching.launchcode.programsOffered[2]).toBe("math");
-    expect((launching.launchcode.programsOffered).length).toBe(3);
 
+  test("Should have java, science, and math as the offered programs ", function() {
+    let programs = ["java","science","math"];
+    for (let i = 0;i < launching.launchcode.programsOffered.length;i++){
+      expect(launching.launchcode.programsOffered[i]).toBe(programs[i]);
+    }
+    expect((launching.launchcode.programsOffered).length).toBe(3);
   });
   
   test("Number is divisible by 2", function () {

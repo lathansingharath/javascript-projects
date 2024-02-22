@@ -1,8 +1,16 @@
 function hello(name) {
-   if (name === undefined)
+   if (name === undefined) {
        name = "World";
+   }
 
-   return "Hello, " + name + "!";
+   if (name === "Lathan") {
+    return "Hello, "+ name + ", you are the king of all";
+   } else {
+    return "Hello, " + name + "!";
+
+   }
+
+   //return "Hello, " + name + "!";
 }
 
 module.exports = hello;

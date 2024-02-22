@@ -6,7 +6,6 @@ let launchcode = {
     programsOffered: ["java","science","math"],
   
 };
-
 const launchOutput = (num) => {
     if (num % 2 === 0) {
         if (num % 3 === 0){

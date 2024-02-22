@@ -15,7 +15,7 @@ let myError = (message) => {
 try {
 
    if (multiplyByTwo(userInput) > 25) {
-    throw Error ("Number is too high ");
+    throw myError ("Number is too high ");
    }
 } catch (err) {
     console.error(err);
