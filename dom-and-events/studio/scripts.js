@@ -6,7 +6,7 @@ window.addEventListener("load",function(){
     let takeOffbutton = document.getElementById("takeoff")
     let shuttleBackColor = document.getElementById("shuttleBackground");
     let shuttleHeight = document.getElementById("spaceShuttleHeight");
-    shuttleBackColor.style.position = "absolute";
+    //shuttleBackColor.style.position = "absolute";
 
     takeOffbutton.addEventListener("click",function(event){
         let confirmTakeOff = window.confirm("Confirm that the shuttle is ready for takeoff");
