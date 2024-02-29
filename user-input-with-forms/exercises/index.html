@@ -3,13 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>Rocket Simulation</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    <script src = "script.js"></script>
     <style>
       label { display: block; margin-bottom: 7px;}
     </style>
   </head>
   <body>
     <!-- TODO: add form here -->
-    
+    <form id="formID" action ="https://handlers.education.launchcode.org/request-parrot" method = "POST">
+
+      <label id="tName">Test Name<input type="text" name="testName"/> </label>
+      <label id="tDate">Test Date<input type="date" name="testDate"/> </label>
+
+      <label>Rocket Type
+        <select name="rockType">
+          <option value="">Please select a type</option>
+          <option value="1">Brant</option>
+          <option value="2">Lynx</option>
+          <option value="3">Orion</option>
+          <option value="4">Terrier</option>
+        </select>
+      </label>
+
+      <label>Number of Rocket Boosters<input type="number" name="boosterCount" min="0" max="10"/> </label>
+
+      Wdind Rating:
+      <label>No Wind<input type="radio" name="windRating" value="0"/> </label>
+      <label>Mild<input type="radio" name="windRating" value="10"/> </label>
+      <label>Strong<input type="radio" name="windRating" value="20"/> </label>
+
+      
+      <button id="runSim">Run Simulation</button>
+     
+    </form>
 
     <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it.
     </p>
