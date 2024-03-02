@@ -6,7 +6,7 @@
         "ask": "https://www.ask.com/web",
     }
 
-//	let pickedSearchEng = document.querySelector("input[name=engine]:checked");		
+
 function setSearchEngine(event) {
     
     let pickedSearchEng = document.querySelector("input[name=engine]:checked");
@@ -46,16 +46,8 @@ window.addEventListener("load", function(){
 // TODO: register the handle
 console.log("Window Loanding");
 inputSearch.value="";
-//pickedSearchEng.checked = false;
-//document.querySelector("input[value = google].checked = false");
-// let myGoogle = document.getElementById("myGoogle");//for testing
-// myGoogle.checked =false; // testing
+
 resestButton();
-let myradioButt = document.querySelector("input[name=engine]");//testing
-//myradioButt[1].checked = false;
-
-
-//console.log(document.forms[2]);//testing
 let form = document.getElementById("searchForm");
 form.addEventListener("submit",function(event){
     
