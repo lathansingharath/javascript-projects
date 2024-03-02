@@ -2,68 +2,29 @@
 
 <head>
 	<meta charset="utf-8">
-	<script>
-		// TODO: create a handler
-		let searchAction = {
-				"google": "https://www.google.com/search",
-				"duckDuckGo": "https://duckduckgo.com/",
-				"bing": "https://www.bing.com/search",
-				"ask": "https://www.ask.com/web",
-			}
 
-				
-		function setSearchEngine(event) {
-			
-			let pickedSearchEng = document.querySelector("input[name=engine]:checked");
-			let formAction = document.getElementById ("searchForm");
-	
-			let searchUrl = "";
-			let inputSearch = document.getElementById("inputSearch");
-			if (inputSearch.value ==="" || pickedSearchEng === false) {
-				console.log("test");
-				window.alert("Empty");
-				event.preventDefault();
-			}
+	<title>Search by Lathan</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="script.js"></script>
 
-			 
-
-
-			for (prop in searchAction) {
-				if (prop === pickedSearchEng.value) {
-					searchUrl = searchAction[prop];
-					formAction.setAttribute("action",searchUrl);
-				
-				}
-			}
-				
-		}
-
-    window.addEventListener("load", function(){
-        // TODO: register the handler
-		
-		let form = document.getElementById("searchForm");
-		form.addEventListener("submit",function(event){
-			
-			setSearchEngine(event);
-		});
-
-
-    });
-	</script>
 
 </head>
 
 <body>
+
+	<b></b>
+	<h1>Search By Lathan</h1>
+	<b></b>
 
 	<form id="searchForm" method="GET" action="">
 	<!-- TODO: add form elements -->
 	<label>  <input id="inputSearch" type="text" name="q"/></label>
 
 	<!-- The code below is the radio input-->
-	<label><input type="radio" name="engine" value="google"/> Google</label>
-    <label><input type="radio" name="engine" value="duckDuckGo"/>DuckDuckGo</label>
-    <label><input type="radio" name="engine" value="bing"/>Bing</label>
-	<label><input type="radio" name="engine" value="ask"/>Ask</label>
+	<label><input type="radio" name="engine" value="google" id="myGoogle"/> Google</label>
+    <label><input type="radio" name="engine" value="duckDuckGo" id="myDuck"/>DuckDuckGo</label>
+    <label><input type="radio" name="engine" value="bing" id="myBing"/>Bing</label>
+	<label><input type="radio" name="engine" value="ask" id="myAsk"/>Ask</label>
 	
 	<button>Go!</button>
 

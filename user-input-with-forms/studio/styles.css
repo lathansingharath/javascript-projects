@@ -1,0 +1,15 @@
+#searchForm {
+    margin-top: 100px;
+    margin-right: 62pc;
+    border: 4px solid blue;
+    padding: 5px;
+}
+h1 {
+    text-align: center;
+    color: brown;
+}
+body {
+    background-color: beige;
+    background-image: url("scrappy-doo.jpg");
+   
+}
